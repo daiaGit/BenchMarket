@@ -1,0 +1,59 @@
+<!-- Input razão social  -->
+<div class="row">
+  <div class="input-field col s12">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_razao_social" 
+            name="txt_razao_social" 
+            maxlength="200" 
+            [(ngModel)]="estabelecimento.razao_social">
+    <label for="txt_razao_social">Razão Social</label>
+  </div>
+</div>
+<!-- Fim input razão social  -->
+
+<!-- Input nome fantasia -->
+<div class="row">
+  <div class="input-field col s12">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_nome_fantasia" 
+            name="txt_nome_fantasia" 
+            maxlength="200" 
+            [(ngModel)]="estabelecimento.nome_fantasia">
+    <label for="txt_nome_fantasia">Nome Fantasia</label>
+  </div>
+</div>
+<!-- Fim input nome fantasia  -->
+
+<!-- Inputs cnpj, incrição municipal e inscrição estadual -->
+<div class="row">
+  <div class="input-field col s12 l4">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_cnpj" 
+            name="txt_cnpj" 
+            maxlength="200" 
+            [(ngModel)]="estabelecimento.cnpj">
+    <label for="txt_cnpj">CNPJ</label>
+  </div>
+  <div class="input-field col s12 l4">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_inscricao_estadual" 
+            name="txt_inscricao_estadual" 
+            maxlength="200" 
+            [(ngModel)]="estabelecimento.inscricao_estadual">
+    <label for="txt_inscricao_estadual">Inscrição Estadual</label>
+  </div>
+  <div class="input-field col s12 l4">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_inscricao_municipal" 
+            name="txt_inscricao_municipal" 
+            maxlength="200" 
+            [(ngModel)]="estabelecimento.inscricao_municipal">
+    <label for="txt_inscricao_estadual">Inscrição Municipal</label>
+  </div>
+</div>
+<!-- Fim Inputs cnpj, incrição municipal e inscrição estadual -->

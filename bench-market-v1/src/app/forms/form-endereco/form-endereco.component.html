@@ -1,0 +1,80 @@
+<!-- Inputs cep e rua -->
+<div class="row">
+  <div class="input-field col s12 l3">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_cep" 
+            name="txt_cep" 
+            maxlength="200" [(ngModel)]="endereco.cep">
+    <label for="txt_cep">CEP</label>
+  </div>
+  <div class="input-field col s12 l9">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_logradouro" 
+            name="txt_logradouro" 
+            maxlength="200" 
+            [(ngModel)]="endereco.logradouro">
+    <label for="txt_logradouro">Logradouro</label>
+  </div>
+</div>
+<!-- Fim Inputs cep e rua -->
+
+<!-- Inputs numero e complemento -->
+<div class="row">
+  <div class="input-field col s12 l3">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="number" 
+            id="num_numero" 
+            name="num_numero" 
+            maxlength="200" 
+            [(ngModel)]="endereco.numero">
+    <label for="num_numero">Numero</label>
+  </div>
+  <div class="input-field col s12 l9">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_complemento" 
+            name="txt_complemento" 
+            maxlength="200" 
+            [(ngModel)]="endereco.complemento">
+    <label for="txt_complemento">complemento</label>
+  </div>
+</div>
+<!-- Fim Inputs numero e complemento -->
+
+<!-- Inputs bairro, cidade e estado -->
+<div class="row">
+  <div class="input-field col s12 l5">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_bairro" 
+            name="txt_bairro" 
+            maxlength="200" 
+            [(ngModel)]="endereco.bairro">
+    <label for="txt_bairro">Bairro</label>
+  </div>
+  <div class="input-field col s12 l4">
+    <i class="material-icons prefix">phone</i>
+    <select materialize="material_select">
+      <option value="" disabled selected>Selecione</option>
+      <option value="1">Valinhos</option>
+      <option value="2">Campinas</option>
+      <option value="3">São Paulo</option>
+      <option value="4">Vinhedo</option>
+    </select>
+    <label>Cidade</label>
+  </div>
+  <div class="input-field col s12 l3">
+    <i class="material-icons prefix">phone</i>
+    <select materialize="material_select">
+      <option value="" disabled selected>Selecione</option>
+      <option value="1">SP</option>
+      <option value="2">MG</option>
+      <option value="3">MS</option>
+      <option value="4">RJ</option>
+    </select>
+    <label>Estado</label>
+  </div>
+</div>
+<!-- Fim Inputs bairro, cidade e estado -->

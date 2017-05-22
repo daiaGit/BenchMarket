@@ -1,0 +1,80 @@
+<div class="navbar-fixed">
+
+  <nav class="red accent-2 z-depth-1">
+    <div class="nav-wrapper container">
+
+      <a  routerLink="" class="brand-logo">MeuLogotipo</a>
+
+      <!-->Aciona menu para dispositivo móveis<-->
+      <a materialize="sideNav" data-activates="slide-out" href="#" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      <!-->Fim Aciona menu para dispositivo móveis<-->
+
+      <!-->Menu para pc<-->
+      <ul class="right hide-on-med-and-down">
+        <li routerLinkActive="active">
+          <a routerLink=""><i class="material-icons left">star</i>Home</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="dropdown-button" data-activates="dropdown-cadastro"
+            data-beloworigin="true" href="#">
+            <i class="material-icons left">input</i>Cadastrar</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="dropdown-button" data-activates="dropdown-login"
+            data-beloworigin="true" href="#">
+            <i class="material-icons left">input</i>Login</a>
+        </li>
+      </ul>
+      <!-->Fim Menu para pc<-->
+
+    </div>
+  </nav>
+</div>
+
+<!-->Menu para celular e tablet<-->
+<ul id="slide-out" class="side-nav">
+  <li routerLinkActive="active">
+    <a routerLink=""><i class="material-icons left">star</i>Home</a>
+  </li>
+  <li routerLinkActive="active">
+    <a class="dropdown-button" data-activates="dropdown-cadastro-mobile"
+      data-beloworigin="true" href="#">
+      <i class="material-icons left">input</i>Login</a>
+  </li>
+  <li routerLinkActive="active">
+    <a class="dropdown-button" data-activates="dropdown-login-mobile"
+      data-beloworigin="true" href="#">
+      <i class="material-icons left">input</i>Login</a>
+  </li>
+</ul>
+<!-->Fim Menu para celular e tablet<-->
+
+<!-->Dropdown Login<-->
+<ul id="dropdown-login" class="dropdown-content">
+  <li routerLinkActive="active"><a  routerLink="/login-consumidor"><i class="material-icons left">mood</i>PF</a></li>
+  <li routerLinkActive="active"><a  routerLink="/login-estabelecimento"><i class="material-icons left">location_city</i>PJ</a></li>
+</ul>
+<!-->Fim Dropdown Login<-->
+
+<!-->Dropdown Login Mobile<-->
+<ul id="dropdown-login-mobile" class="dropdown-content">
+  <li routerLinkActive="active"><a  routerLink="/login-consumidor"><i class="material-icons left">mood</i>PF</a></li>
+  <li routerLinkActive="active"><a  routerLink="/login-estabelecimento"><i class="material-icons left">location_city</i>PJ</a></li>
+</ul>
+<!-->Fim Dropdown Login Mobile<-->
+
+<!-->Dropdown Cadastro<-->
+<ul id="dropdown-cadastro" class="dropdown-content">
+  <li routerLinkActive="active"><a  routerLink="/cadastro-consumidor"><i class="material-icons left">mood</i>PF</a></li>
+  <li routerLinkActive="active"><a  routerLink="/cadastro-estabelecimento"><i class="material-icons left">location_city</i>PJ</a></li>
+</ul>
+<!-->Fim Dropdown Cadastro<-->
+
+<!-->Dropdown Cadastro Mobile<-->
+<ul id="dropdown-cadastro-mobile" class="dropdown-content">
+  <li routerLinkActive="active"><a  routerLink="/cadastro-consumidor"><i class="material-icons left">mood</i>PF</a></li>
+  <li routerLinkActive="active"><a  routerLink="/cadastro-estabelecimento"><i class="material-icons left">location_city</i>PJ</a></li>
+</ul>
+<!-->Fim Dropdown Cadastro Mobile<-->

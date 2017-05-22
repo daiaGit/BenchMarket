@@ -1,0 +1,128 @@
+<!-- 
+  * @autor: Daiane Alves dos Santos <daianealves_@hotmail.com>
+  * Formulário de Cadastro de Consumidor
+-->
+<div class="section">
+
+  <div class="row">
+    <div class="col s12 offset-l1 l10">
+      <div class="chip green lighten-4" *ngIf="sucesso">
+        Cadastro realizado com sucesso! {{debug()}}
+        <i class="close material-icons">close</i>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+
+      <form *ngIf="!sucesso" (ngSubmit)="enviar()" [ngFormModel]="consumidorForm">
+
+        <div class="card-panel hoverable">
+          
+          <div class="row">
+            <div class="col">
+              <span class="card-title">Cadastro Consumidor</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">account_circle</i>
+              <input  type="text" 
+                      id="txt_nome" 
+                      name="txt_nome" 
+                      maxlength="200" 
+                      [(ngModel)]="consumidor.nome">
+              <label for="txt_nome">Nome</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">phone</i>
+              <input  type="text" 
+                      id="txt_sobrenome" 
+                      name="txt_sobrenome" 
+                      maxlength="200" 
+                      [(ngModel)]="consumidor.sobrenome">
+              <label for="txt_sobrenome">Sobrenome</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 l5">
+              <i class="material-icons prefix">phone</i>
+              <select materialize="material_select">
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="1">Celular</option>
+                  <option value="2">Fixo</option>
+                  <option value="3">Ramal</option>
+                  <option value="4">Recado</option>
+                </select>
+              <label>Tipo de telefone</label>
+            </div>
+            <div class="input-field col s12 l2">
+              <i class="material-icons prefix">phone</i>
+              <input  type="text" 
+                      id="txt_ddd" 
+                      name="txt_ddd" 
+                      maxlength="4" 
+                      placeholder="(99)" 
+                      [(ngModel)]="consumidor.ddd" 
+                      generic-mask="(19)">
+              <label for="txt_ddd">DDD</label>
+            </div>
+            <div class="input-field col s12 l5">
+              <i class="material-icons prefix">phone</i>
+              <input  type="text" 
+                      id="txt_telefone" 
+                      name="txt_telefone" 
+                      maxlength="9" 
+                      placeholder="9999-9999" 
+                      [(ngModel)]="consumidor.numero" 
+                      generic-mask="9999-9999">
+              <label for="txt_telefone">Telefone</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 l12">
+              <i class="material-icons prefix">account_circle</i>
+              <input  type="text" 
+                      id="txt_email" 
+                      name="txt_email" 
+                      maxlength="200" 
+                      [(ngModel)]="consumidor.email">
+              <label for="txt_email">Email</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">account_circle</i>
+              <input  type="text" 
+                      id="txt_senha" 
+                      name="txt_senha" 
+                      maxlength="20" 
+                      [(ngModel)]="consumidor.senha">
+              <label for="txt_senha">Senha</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">account_circle</i>
+              <input  type="text" 
+                      id="txt_senha_confirma" 
+                      name="txt_senha_confirma" maxlength="20" [(ngModel)]="consumidor.senhaConfirma">
+              <label for="txt_senha_confirma">Confirmar Senha</label>
+            </div>
+
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>

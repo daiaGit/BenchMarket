@@ -1,0 +1,98 @@
+<!-- Inputs Nome e sobrenome -->
+<div class="row">
+  <div class="input-field col s12 l6">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_nome_contratante" 
+            name="txt_nome_contratante" 
+            maxlength="200" 
+            [(ngModel)]="contratante.nome_contratante">
+    <label for="txt_nome_contratante">Nome</label>
+  </div>
+  <div class="input-field col s12 l6">
+    <i class="material-icons prefix">phone</i>
+    <input  type="text" 
+            id="txt_sobrenome_contratante" 
+            name="txt_sobrenome_contratante" 
+            maxlength="200" 
+            [(ngModel)]="contratante.sobrenome_contratante">
+    <label for="txt_sobrenome_contratante">Sobrenome</label>
+  </div>
+</div>
+<!-- Fim Inputs Nome e sobrenome -->
+
+<!-- Inputs cpf e cargo -->
+<div class="row">
+  <div class="input-field col s12 l6">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_cpf_contratante" 
+            name="txt_cpf_contratante" 
+            maxlength="15" 
+            [(ngModel)]="contratante.cpf_contratante" 
+            generic-mask="(15)">
+    <label for="txt_cpf_contratante">CPF</label>
+  </div>
+  <div class="input-field col s12 l6">
+    <i class="material-icons prefix">phone</i>
+    <input  type="text" 
+            id="txt_cargo_contratante" 
+            name="txt_cargo_contratante" 
+            maxlength="200" 
+            [(ngModel)]="contratante.cargo_contratante">
+    <label for="txt_cargo_contratante">Cargo</label>
+  </div>
+</div>
+<!-- Fim inputs cpf e cargo -->
+
+<!-- Inputs tipo telefone, ddd, numero telefone -->
+<div class="row">
+  <div class="input-field col s12 l5">
+    <i class="material-icons prefix">phone</i>
+    <select materialize="material_select">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1">Celular</option>
+                    <option value="2">Fixo</option>
+                    <option value="3">Ramal</option>
+                    <option value="4">Recado</option>
+                  </select>
+    <label>Tipo de telefone</label>
+  </div>
+  <div class="input-field col s12 l2">
+    <i class="material-icons prefix">phone</i>
+    <input  type="text" 
+            id="txt_ddd_contratante" 
+            name="txt_ddd_contratante" 
+            maxlength="4" 
+            placeholder="(99)" 
+            [(ngModel)]="contratante.ddd_fone_contratante"
+            generic-mask="(19)">
+    <label for="txt_ddd_contratante">DDD</label>
+  </div>
+  <div class="input-field col s12 l5">
+    <i class="material-icons prefix">phone</i>
+    <input  type="text" 
+            id="txt_telefone_contratante" 
+            name="txt_telefone_contratante" 
+            maxlength="9" 
+            placeholder="9999-9999" 
+            [(ngModel)]="contratante.numero_fone_contratante"
+            generic-mask="9999-9999">
+    <label for="txt_telefone_contratante">Telefone</label>
+  </div>
+</div>
+<!-- Fim inputs tipo telefone, ddd, numero telefone -->
+
+<!-- Inputs email -->
+<div class="row">
+  <div class="input-field col s12">
+    <i class="material-icons prefix">account_circle</i>
+    <input  type="text" 
+            id="txt_email_contratante" 
+            name="txt_email_contratante" 
+            maxlength="200" 
+            [(ngModel)]="contratante.email_contratante">
+    <label for="txt_email_contratante">Email</label>
+  </div>
+</div>
+<!-- Fim inputs email -->
