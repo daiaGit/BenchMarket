@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, AbstractControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-consumidor-cadastro',
@@ -8,9 +8,10 @@ import { FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/for
 })
 export class ConsumidorCadastroComponent implements OnInit {
 
-  consumidorForm: FormGroup;
+  consumidorForm: NgForm;
+  @ViewChild('consumidorForm') currentForm: NgForm;
 
-  sucesso: boolean = false;
+  submitted: boolean = false;
 
   consumidor: any = {
     nome: '',
@@ -22,47 +23,93 @@ export class ConsumidorCadastroComponent implements OnInit {
     senhaConfirma: ''
   };
 
-  constructor(fb: FormBuilder) {
-    this.buildForm(fb);      
-  }
+  formErrors: any = {
+    txt_nome: '',
+    txt_sobrenome: '',
+    txt_ddd: '',
+    txt_numero: '',
+    txt_email: '',
+    txt_senha: '',
+    txt_senhaConfirma: ''
+  };
 
-  //método que declara todas regras de validaçao do formulario
-  buildForm(fb: FormBuilder): void {
-    this.consumidorForm = fb.group({
-      txt_nome: [this.consumidor.nome, ['', Validators.required]],
-      txt_sobrenome: ['', Validators.required],
-      txt_ddd: ['', Validators.required],
-      txt_telefone: ['', Validators.required],
-      txt_email: ['', Validators.compose([
-                      Validators.required])],
-      txt_senha: ['', Validators.required],
-      txt_senha_confirma: ['', Validators.required]
-    });
-  }
+  validationMessages = {
+    txt_nome: {
+      'required': 'Nome obrigatório.',
+      'minlenght': 'Nome menor que 4.',
+      'maxlength': 'Nome maior que 24'
+    },
+    txt_sobrenome: {
+      'required': 'Nome obrigatório.',
+      'minlenght': 'Nome menor que 4.',
+      'maxlength': 'Nome maior que 24'
+    },
+    txt_ddd: {
+      'required': 'Nome obrigatório.',
+      'minlenght': 'Nome menor que 4.',
+      'maxlength': 'Nome maior que 24'
+    },
+    txt_numero: {
+      'required': 'Nome obrigatório.',
+      'minlenght': 'Nome menor que 4.',
+      'maxlength': 'Nome maior que 24'
+    },
+    txt_email: {
+      'required': 'Nome obrigatório.',
+      'minlenght': 'Nome menor que 4.',
+      'maxlength': 'Nome maior que 24'
+    },
+    txt_senha: {
+      'required': 'Nome obrigatório.',
+      'minlenght': 'Nome menor que 4.',
+      'maxlength': 'Nome maior que 24'
+    },
+    txt_senhaConfirma: {
+      'required': 'Nome obrigatório.',
+      'minlenght': 'Nome menor que 4.',
+      'maxlength': 'Nome maior que 24'
+    },
+  };
 
-  //método que verifica se possui algum erro de validaçao
-  hasErrors():boolean {
-    var hasErrors: boolean = false;
-    for(var controlName in this.consumidorForm.controls){
-      var control: AbstractControl = this.consumidorForm.controls[controlName];
-      if(!control.valid && !control.pristine) {
-        hasErrors = true;
-        break;
-      }
-    }
-    return hasErrors;
-  }
+  constructor() {
 
-  enviar(): void {
-    this.sucesso = true;
-  }
-
-  debug(): string {
-    return JSON.stringify(this.consumidor);
   }
 
   ngOnInit() {
 
+  }
+
+  onSubmit() {
+    this.submitted = true;
+  }
+
+  ngAfterViewChecked() {
+    this.formChanged();
+  }
+
+  formChanged() {
+    if (this.currentForm === this.consumidorForm) {
+      return;
+    }
+    if (this.consumidorForm) {
+      this.consumidorForm.valueChanges.subscribe(data => this.onValueChanged(data));
+    }
+  }
+
+  onValueChanged(data?: any) {
+    if (!this.consumidorForm) {
+      return;
+    }
+    for (const field in this.formErrors) {
+      this.formErrors[field] = '';
+      const control = form.get(field);
+      if (control && control.dirty && !control.valid) {
+        const messages = this.validationMessages[field];
+        for (const key in control.errors) {
+          this.formErrors[field] += messages[key] + '';
+        }
+      }
+    }
   }
 
 }

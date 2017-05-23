@@ -27,6 +27,7 @@ import { LoginConsumidorComponent } from './login-consumidor/login-consumidor.co
 import { LoginEstabelecimentoComponent } from './login-estabelecimento/login-estabelecimento.component';
 import { routing } from "app/app.routing";
 import { SharedComponent } from './shared/shared.component';
+import { TesteFormComponent } from './teste-form/teste-form.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { SharedComponent } from './shared/shared.component';
     LoginEstabelecimentoComponent,
     LoginConsumidorComponent,
     SharedComponent,
-    GenericMaskDirective
+    GenericMaskDirective,
+    TesteFormComponent
   ],
   imports: [
     BrowserModule,
