@@ -2,7 +2,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 
 //imports style
 import { MaterializeModule } from 'angular2-materialize';
@@ -23,12 +24,10 @@ import { FormTelefoneComponent } from './forms/form-telefone/form-telefone.compo
 import { GenericMaskDirective } from './shared/mask/generic-mask.directive';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
-import { LoginConsumidorComponent } from './login-consumidor/login-consumidor.component';
-import { LoginEstabelecimentoComponent } from './login-estabelecimento/login-estabelecimento.component';
+import { LoginConsumidorComponent } from './login/login-consumidor/login-consumidor.component';
+import { LoginEstabelecimentoComponent } from './login/login-estabelecimento/login-estabelecimento.component';
 import { routing } from "app/app.routing";
 import { SharedComponent } from './shared/shared.component';
-import { TesteFormComponent } from './teste-form/teste-form.component';
-
 
 @NgModule({
   declarations: [
@@ -49,15 +48,20 @@ import { TesteFormComponent } from './teste-form/teste-form.component';
     LoginEstabelecimentoComponent,
     LoginConsumidorComponent,
     SharedComponent,
-    GenericMaskDirective,
-    TesteFormComponent
+    GenericMaskDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterializeModule,
-    routing
+    routing,
+    TranslateModule,
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (http: Http) => new TranslateStaticLoader(http, './assets/i18n', '.json'),
+      deps: [Http]
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

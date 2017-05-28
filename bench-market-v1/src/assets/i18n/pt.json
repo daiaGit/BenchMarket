@@ -1,0 +1,48 @@
+{
+    "form-contratante": {
+        "p_titulo": "Cadastro de Consumidor",
+        "lb_nome": "Nome",
+        "lb_sobrenome": "Sobrenome",
+        "lb_tipo_telefone": "Tipo de Telefone",
+        "lb_ddd": "DDD",
+        "lb_numero_telefone": "Número do Telefone",
+        "lb_email": "Email",
+        "lb_senha": "Senha",
+        "lb_senha_confirma": "Confirmar Senha"
+    },
+
+    "validacao-form-error": {
+        "msg_nome": {
+            "required": "Nome obrigatório.",
+            "maxlength": "Nome com maxímo 200 caracteres.",
+            "minlength": "Nome com minímo 3 caracteres."
+        },
+        "msg_sobrenome": {
+            "required": "Sobrenome obrigatório.",
+            "maxlength": "Sobrenome com maxímo 200 caracteres.",
+            "minlength": "Sobrenome com minímo 3 caracteres."
+        },
+        "msg_ddd": {
+            "required": "DDD obrigatório."
+        },
+        "msg_numero_telefone": {
+            "required": "Numero Telefone obrigatório."
+        },
+        "msg_email": {
+            "required": "Email obrigatório.",
+            "maxlength": "Email com maxímo 200 caracteres.",
+            "minlength": "Email com minímo 3 caracteres."
+        },
+        "msg_senha": {
+            "required": "Senha obrigatório.",
+            "maxlength": "Senha com maxímo 200 caracteres.",
+            "minlength": "Senha com minímo 3 caracteres."
+        },
+        "msg_confirma_senha": {
+            "required": "Confirmar senha obrigatório.",
+            "maxlength": "Confirmar senha com maxímo 200 caracteres.",
+            "minlength": "Confirmar senha com minímo 3 caracteres."
+        }
+    }
+}
+

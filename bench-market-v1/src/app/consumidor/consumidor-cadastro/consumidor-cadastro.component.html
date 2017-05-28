@@ -16,13 +16,13 @@
   <div [hidden]="submitted" class="row">
     <div class="col s12">
 
-      <form *ngIf="!sucesso" (ngSubmit)="enviar()" [ngFormModel]="consumidorForm">
+      <form #consumidorForm="ngForm" (ngSubmit)="onSubmit()">
 
         <div class="card-panel hoverable">
           
           <div class="row">
             <div class="col">
-              <span class="card-title">Cadastro Consumidor</span>
+              <span class="card-title">  {{ 'form-contratante.p_titulo' | translate }} </span>
             </div>
           </div>
 
@@ -30,20 +30,30 @@
             <div class="input-field col s12 l6">
               <i class="material-icons prefix">account_circle</i>
               <input  type="text" 
-                      id="txt_nome" 
-                      name="txt_nome" 
-                      maxlength="200" 
-                      [(ngModel)]="consumidor.nome">
-              <label for="txt_nome">Nome</label>
+                      id="nome" 
+                      name="nome" 
+                      maxlength="10"
+                      minlength="4" 
+                      [(ngModel)]="consumidor.nome"
+                      required>
+              <label for="nome">  {{ 'form-contratante.lb_nome' | translate }} </label>
+              <div class="col offset-s1 red-text" *ngIf="formErrors.nome">
+                {{ formErrors.nome }}
+              </div>
             </div>
             <div class="input-field col s12 l6">
               <i class="material-icons prefix">phone</i>
               <input  type="text" 
-                      id="txt_sobrenome" 
-                      name="txt_sobrenome" 
+                      id="sobrenome" 
+                      name="sobrenome" 
                       maxlength="200" 
-                      [(ngModel)]="consumidor.sobrenome">
-              <label for="txt_sobrenome">Sobrenome</label>
+                      minlength="4"
+                      [(ngModel)]="consumidor.sobrenome"
+                      required>
+              <label for="sobrenome">  {{ 'form-contratante.lb_sobrenome' | translate }} </label>
+              <div class="col offset-s1 red-text" *ngIf="formErrors.sobrenome">
+                {{ formErrors.sobrenome }}
+              </div>
             </div>
           </div>
 
@@ -57,29 +67,35 @@
                   <option value="3">Ramal</option>
                   <option value="4">Recado</option>
                 </select>
-              <label>Tipo de telefone</label>
+              <label>  {{ 'form-contratante.lb_tipo_telefone' | translate }} </label>
             </div>
-            <div class="input-field col s12 l2">
+            <div class="input-field col s12 l3">
               <i class="material-icons prefix">phone</i>
               <input  type="text" 
-                      id="txt_ddd" 
-                      name="txt_ddd" 
-                      maxlength="4" 
+                      id="ddd" 
+                      name="ddd" 
                       placeholder="(99)" 
                       [(ngModel)]="consumidor.ddd" 
-                      generic-mask="(19)">
-              <label for="txt_ddd">DDD</label>
+                      generic-mask="(19)"
+                      required>
+              <label for="ddd">  {{ 'form-contratante.lb_ddd' | translate }} </label>
+              <div class="col offset-s1 red-text" *ngIf="formErrors.ddd">
+                {{ formErrors.ddd }}
+              </div>
             </div>
-            <div class="input-field col s12 l5">
+            <div class="input-field col s12 l4">
               <i class="material-icons prefix">phone</i>
               <input  type="text" 
-                      id="txt_telefone" 
-                      name="txt_telefone" 
-                      maxlength="9" 
+                      id="numero_telefone" 
+                      name="numero_telefone" 
                       placeholder="9999-9999" 
-                      [(ngModel)]="consumidor.numero" 
-                      generic-mask="9999-9999">
-              <label for="txt_telefone">Telefone</label>
+                      [(ngModel)]="consumidor.numero_telefone" 
+                      generic-mask="9999-9999"
+                      required>
+              <label for="telefone"> {{ 'form-contratante.lb_numero_telefone' | translate }} </label>
+              <div class="col offset-s1 red-text" *ngIf="formErrors.numero_telefone">
+                {{ formErrors.numero_telefone }}
+              </div>
             </div>
           </div>
 
@@ -87,11 +103,16 @@
             <div class="input-field col s12 l12">
               <i class="material-icons prefix">account_circle</i>
               <input  type="text" 
-                      id="txt_email" 
-                      name="txt_email" 
-                      maxlength="200" 
-                      [(ngModel)]="consumidor.email">
-              <label for="txt_email">Email</label>
+                      id="email" 
+                      name="email" 
+                      maxlength="200"
+                      minlength="4" 
+                      [(ngModel)]="consumidor.email"
+                      required>
+              <label for="email">  {{ 'form-contratante.lb_email' | translate }} </label>
+              <div class="col offset-s1 red-text" *ngIf="formErrors.email">
+                {{ formErrors.email }}
+              </div>
             </div>
           </div>
 
@@ -99,22 +120,34 @@
             <div class="input-field col s12 l6">
               <i class="material-icons prefix">account_circle</i>
               <input  type="text" 
-                      id="txt_senha" 
-                      name="txt_senha" 
-                      maxlength="20" 
-                      [(ngModel)]="consumidor.senha">
-              <label for="txt_senha">Senha</label>
+                      id="senha" 
+                      name="senha"
+                      maxlength="20"
+                      minlength="4" 
+                      [(ngModel)]="consumidor.senha"
+                      required>
+              <label for="senha">  {{ 'form-contratante.lb_senha' | translate }} </label>
+              <div class="col offset-s1 red-text" *ngIf="formErrors.senha">
+                {{ formErrors.senha }}
+              </div>
             </div>
             <div class="input-field col s12 l6">
               <i class="material-icons prefix">account_circle</i>
               <input  type="text" 
-                      id="txt_senha_confirma" 
-                      name="txt_senha_confirma" maxlength="20" [(ngModel)]="consumidor.senhaConfirma">
-              <label for="txt_senha_confirma">Confirmar Senha</label>
+                      id="senha_confirma" 
+                      name="senha_confirma" 
+                      maxlength="20"
+                      minlength="4" 
+                      [(ngModel)]="consumidor.senha_confirma"
+                      required>
+              <label for="senha_confirma">  {{ 'form-contratante.lb_senha_confirma' | translate }} </label>
+              <div class="col offset-s1 red-text" *ngIf="formErrors.senha_confirma">
+                {{ formErrors.senha_confirma }}
+              </div>
             </div>
 
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
+            <button class="btn waves-effect waves-light" type="submit" [disabled]="!consumidorForm.form.valid">
+              Submit<i class="material-icons right">send</i>
             </button>
 
           </div>

@@ -1,0 +1,49 @@
+{
+    "form-contratante":{
+        "p_titulo": "Registre des consommateurs",
+        "lb_nome": "Nom",
+        "lb_sobrenome": "nom de famille",
+        "lb_tipo_telefone": "Type de téléphone",
+        "lb_ddd": "DDD",
+        "lb_numero_telefone": "numéro de téléphone",
+        "lb_email": "Envoyer",
+        "lb_senha": "Mot de passe",
+        "lb_senha_confirma": "Confirmer mot de passe"
+    },
+    
+
+"validacao-form-error": {
+        "msg_nome": {
+            "required": "Nom nécessaire.",
+            "maxlength": "Nom jusqu'à 200 caractères.",
+            "minlength": "Nom avec un minimum de 3 caractères."
+        },
+        "msg_sobrenome": {
+            "required": "Nom de famille nécessaire.",
+            "maxlength": "Nom de famille jusqu'à 200 caractères.",
+            "minlength": "Nom de famille avec un minimum de 3 caractères."
+        },
+        "msg_ddd": {
+            "required": "DDD obligatoire."
+        },
+        "msg_numero_telefone": {
+            "required": "Numéro obligatoire téléphone."
+        },
+        "msg_email": {
+            "required": "E-mail requis.",
+            "maxlength": "E-mail avec un maximum de 200 caractères.",
+            "minlength": "Envoyer avec un minimum de 3 caractères."
+        },
+        "msg_senha": {
+            "required": "Mot de passe requis.",
+            "maxlength": "Mot de passe 200 caractères.",
+            "minlength": "Mot de passe avec un minimum de 3 caractères."
+        },
+        "confirma_senha": {
+            "required": "Confirmer mot de passe requis.",
+            "maxlength": "Confirmer mot de passe avec un maximum de 200 caractères.",
+            "minlength": "Confirmer mot de passe avec un minimum de 3 caractères."
+        }
+    }
+
+}

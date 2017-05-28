@@ -1,0 +1,49 @@
+{
+    "form-contratante": {
+        "p_titulo": "Consumer Registration",
+        "lb_nome": "Name",
+        "lb_sobrenome": "Last name",
+        "lb_tipo_telefone": "Phone Type",
+        "lb_ddd": "DDD",
+        "lb_numero_telefone": "Telephone number",
+        "lb_email": "Email",
+        "lb_senha": "Password",
+        "lb_senha_confirma": "Confirm password"
+    },
+
+"valida-form-error": {
+        "msg_nome": {
+            "required": "Required name.",
+            "maxlength": "Name with max 200 characters.",
+            "minlength": "Name with at least 3 characters."
+        },
+        "msg_sobrenome": {
+            "required": "Last name required.",
+            "maxlength": "Last name with max 200 characters.",
+            "minlength": "Surname with at least 3 characters."
+        },
+        "msg_ddd": {
+            "required": "DDD required."
+        },
+        "msg_numero_telefone": {
+            "required": "Required phone number."
+        },
+        "msg_email": {
+            "required": "Email required.",
+            "maxlength": "Email with max 200 characters.",
+            "minlength": "Email with at least 3 characters."
+        },
+        "msg_senha": {
+            "required": "Password required.",
+            "maxlength": "Password with max 200 characters.",
+            "minlength": "Password with at least 3 characters."
+        },
+        "msg_confirma_senha": {
+            "required": "Confirm required password.",
+            "maxlength": "Confirm password with max 200 characters.",
+            "minlength": "Confirm password with at least 3 characters."
+        }
+    }
+}
+
+

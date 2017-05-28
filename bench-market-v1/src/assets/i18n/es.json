@@ -1,0 +1,47 @@
+{
+    "form-contratante": {
+        "p_titulo": "Registro de Consumidores",
+        "lb_nome": "Nombre",
+        "lb_sobrenome": "Apellido",
+        "lb_tipo_telefone": "Tipo de Teléfono",
+        "lb_ddd": "DDD",
+        "lb_numero_telefone": "Numero de teléfono",
+        "lb_email": "Correo electrónico",
+        "lb_senha": "Contraseña:",
+        "lb_senha_confirma": "Confirmar seña"
+    },
+    
+    "validacao-form-error": {
+        "msg_nome": {
+            "required": "Nombre obligatorio.",
+            "maxlength": "Nombre con un máximo de 200 caracteres.",
+            "minlength": "Nombre con minimo 3 caracteres."
+        },
+        "msg_sobrenome": {
+            "required": "Apellido obligatorio.",
+            "maxlength": "Apellido con un máximo de 200 caracteres.",
+            "minlength": "Apellido con minimo 3 caracteres."
+        },
+        "msg_ddd": {
+            "required": "DDD obligatorio."
+        },
+        "msg_numero_telefone": {
+            "required": "Número obligatorio."
+        },
+        "msg_email": {
+            "required": "Correo obligatorio.",
+            "maxlength": "Correo con un máximo de 200 caracteres.",
+            "minlength": "Email con minimo 3 caracteres."
+        },
+        "msg_senha": {
+            "required": "Contraseña obligatoria.",
+            "maxlength": "Contraseña con máximo 200 caracteres.",
+            "minlength": "Contraseña con minimo 3 caracteres."
+        },
+        "msg_confirma_senha": {
+            "required": "Confirmar la contraseña obligatoria.",
+            "maxlength": "Confirmar la contraseña con un máximo de 200 caracteres.",
+            "minlength": "Confirmar contraseña con minimo 3 caracteres."
+        }
+    }
+}

@@ -17,6 +17,14 @@
           <a routerLink=""><i class="material-icons left">star</i>Home</a>
         </li>
         <li routerLinkActive="active">
+          <a routerLink="teste-translate"><i class="material-icons left">star</i>Tradução</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="dropdown-button" data-activates="dropdown-idioma"
+            data-beloworigin="true" href="#">
+            <i class="material-icons left">input</i>Idioma</a>
+        </li>        
+        <li routerLinkActive="active">
           <a class="dropdown-button" data-activates="dropdown-cadastro"
             data-beloworigin="true" href="#">
             <i class="material-icons left">input</i>Cadastrar</a>
@@ -39,9 +47,14 @@
     <a routerLink=""><i class="material-icons left">star</i>Home</a>
   </li>
   <li routerLinkActive="active">
+    <a class="dropdown-button" data-activates="dropdown-idioma-mobile"
+       data-beloworigin="true" href="#">
+    <i class="material-icons left">input</i>Idioma</a>
+  </li> 
+  <li routerLinkActive="active">
     <a class="dropdown-button" data-activates="dropdown-cadastro-mobile"
       data-beloworigin="true" href="#">
-      <i class="material-icons left">input</i>Login</a>
+      <i class="material-icons left">input</i>Cadastro</a>
   </li>
   <li routerLinkActive="active">
     <a class="dropdown-button" data-activates="dropdown-login-mobile"
@@ -78,3 +91,21 @@
   <li routerLinkActive="active"><a  routerLink="/cadastro-estabelecimento"><i class="material-icons left">location_city</i>PJ</a></li>
 </ul>
 <!-->Fim Dropdown Cadastro Mobile<-->
+
+<!-->Dropdown Idioma<-->
+<ul id="dropdown-idioma" class="dropdown-content">
+  <a (click) = "changeLanguage('es')"><i class="material-icons left">location_city</i>Espanhol</a>
+  <a (click) = "changeLanguage('fr')"><i class="material-icons left">location_city</i>Francês</a>
+  <a (click) = "changeLanguage('en')" ><i class="material-icons left">location_city</i>Inglês</a>
+  <a (click) = "changeLanguage('pt')" ><i class="material-icons left">mood</i>Português</a>
+</ul>
+<!-->Fim Dropdown Cadastro<-->
+
+<!-->Dropdown Idioma Mobile<-->
+<ul id="dropdown-idioma-mobile" class="dropdown-content">
+  <a (click) = "changeLanguage('es')"><i class="material-icons left">location_city</i>Espanhol</a>
+  <a (click) = "changeLanguage('fr')"><i class="material-icons left">location_city</i>Francês</a>
+  <a (click) = "changeLanguage('en')" ><i class="material-icons left">location_city</i>Inglês</a>
+  <a (click) = "changeLanguage('pt')" ><i class="material-icons left">mood</i>Português</a>
+</ul>
+<!-->Fim Dropdown Idioma Mobile<-->
